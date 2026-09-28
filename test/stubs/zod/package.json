@@ -1,0 +1,9 @@
+{
+  "name": "zod",
+  "version": "0.0.0-stub",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  }
+}

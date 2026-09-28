@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="dsh-auto-compaction">
+  <defs>
+    <linearGradient id="ac" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f6fed"/>
+      <stop offset="1" stop-color="#17c3b2"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#ac)"/>
+  <!-- 三条逐渐变短并收敛的条：上下文被压缩进一条摘要 -->
+  <g fill="#ffffff">
+    <rect x="12" y="18" width="40" height="6" rx="3"/>
+    <rect x="17" y="29" width="30" height="6" rx="3" opacity="0.78"/>
+    <rect x="22" y="40" width="20" height="6" rx="3" opacity="0.55"/>
+  </g>
+</svg>

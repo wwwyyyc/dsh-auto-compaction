@@ -1,0 +1,72 @@
+{
+  "name": "dsh-auto-compaction",
+  "version": "0.8.0",
+  "description": "Ratio-driven automatic context compaction for DeepSeek Harness: effective-window override, GUI-consistent trigger numerator, verbatim tail retention, turn-end (PostTurn) phase, self-learned capacity from provider overflows and a /auto-compaction diagnostics command.",
+  "license": "MIT",
+  "author": "wwwyyyc",
+  "type": "module",
+  "icon": "icon.svg",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "cordis",
+    "plugin",
+    "compaction",
+    "context",
+    "token",
+    "auto-compaction"
+  ],
+  "homepage": "https://github.com/wwwyyyc/dsh-auto-compaction#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wwwyyyc/dsh-auto-compaction.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wwwyyyc/dsh-auto-compaction/issues"
+  },
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "files": [
+    "icon.svg",
+    "lib",
+    "docs",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/run.mjs",
+    "test:integration": "node test/run-integration.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "zod": "^4.0.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.4",
+    "@deepseek-ai/dsh-commands": ">=0.1.7-rc.2",
+    "@deepseek-ai/dsh-compaction": ">=0.1.7-rc.2",
+    "@deepseek-ai/dsh-compaction-basic": ">=0.1.7-rc.2",
+    "@deepseek-ai/dsh-storage-domain": ">=0.1.7-rc.2",
+    "@deepseek-ai/schemastery": "^3.18.4"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-commands": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-storage-domain": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

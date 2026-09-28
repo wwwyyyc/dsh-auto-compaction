@@ -1,0 +1,14 @@
+# 依赖与临时产物（发布包由 package.json 的 files 白名单决定，与这里无关）
+node_modules/
+.tscheck/
+*.log
+
+# 我做的安装备份/探针残留（不应入库）
+.install-backup*/
+.probe.mjs
+.smoke.mjs
+.logic-test.mjs
+
+# 系统
+Thumbs.db
+.DS_Store

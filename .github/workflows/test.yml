@@ -1,0 +1,22 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      # 测试自带 seam 替身（含 schemastery），因此不需要 DSH 安装即可跑。
+      - run: node --check lib/index.js
+      - run: node test/run.mjs
+      # 真机集成测试需要本地 DSH 安装；没有时 runner 以退出码 2 表示"跳过"。
+      - run: node test/run-integration.mjs; code=$?; [ $code -eq 0 ] || [ $code -eq 2 ]

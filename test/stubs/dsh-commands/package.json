@@ -1,0 +1,8 @@
+{
+  "name": "@deepseek-ai/dsh-commands",
+  "version": "0.0.0-stub",
+  "type": "module",
+  "exports": {
+    "./brand": "./brand.js"
+  }
+}
